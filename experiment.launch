@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="rkf_mask" name="rosbagstream" type="rosbagstream" output="screen">
+    </node>
+    <node pkg="rkf_mask" name="tethermask" type="tethermask" output="screen">
+    </node>
+    <node pkg="rkf_mask" name="cvdisplay" type="cvdisplay" output="screen">
+    </node>
+</launch>
+
+<!--<node pkg="xsens_drive" name="mtnode.py" type="mtnode.py" output="screen">-->
+    <!--<param name="frame_id" value="base_link" />-->
+<!--</node>-->
