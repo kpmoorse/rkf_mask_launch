@@ -1,9 +1,14 @@
 <launch>
     <node pkg="rkf_mask" name="rosbagstream" type="rosbagstream" output="screen">
+        <param name="output_image" type="str" value="/bag_image"/>
+        <param name="bagfile" type="str" value="/home/dickinsonlab/git/rkf_mask_launch/rkf_test01.bag"/>
     </node>
     <node pkg="rkf_mask" name="tethermask" type="tethermask" output="screen">
+        <param name="input_image" type="str" value="/bag_image"/>
+        <param name="output_image" type="str" value="/masked_image"/>
     </node>
     <node pkg="rkf_mask" name="cvdisplay" type="cvdisplay" output="screen">
+        <param name="input_image" type="str" value="/masked_image"/>
     </node>
 </launch>
 
